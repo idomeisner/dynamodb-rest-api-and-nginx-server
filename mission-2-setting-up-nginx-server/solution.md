@@ -27,7 +27,7 @@
 7. Now we'll add NGINX installation to the EC2 bootstrap.\
    In the `Advanced details` section, we'll add the following bootstrap script:
 
-```
+```shell
 #!/bin/bash
 # update the server package list
 sudo apt update
