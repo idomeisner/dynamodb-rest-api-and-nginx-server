@@ -1,5 +1,10 @@
 ## Mission 2 - Setting Up NGINX Server
 
+### Table of contents
+* [Launching EC2 instance](#launching-ec2-instance)
+* [Accessing the static website](#accessing-the-static-website)
+<br>
+
 ### Launching EC2 instance
 
 1. Go to AWS EC2 service.
