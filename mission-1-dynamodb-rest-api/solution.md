@@ -1,8 +1,9 @@
-## Mission 2 - DynamoDB REST API
+## Mission 1 - DynamoDB REST API
 
 ### Table of contents
 * [DynamoDB](#dynamodb)
 * [Lambda Function](#lambda-function)
+* [API Gateway](#api-gateway)
 <br>
 
 ![Architecture](./images/architecture.png)
@@ -69,6 +70,8 @@ Another option to give the Lambda function permissions is to manually create the
     ]
 }
 ```
+
+5. Write the lambda function code.
 <br>
 
 ### API Gateway
@@ -96,3 +99,6 @@ We’ll create an API Gateway resource with 2 methods:\
 6. Create `PUT` method.
    The method is integrated with the lambda function `dynamodb-rest-api`.<br>
    ![API PUT Method Creation](./images/api_put_method_creation.png)
+
+7. The API routes:<br>
+   ![API Routes](./images/api_routes.png)
