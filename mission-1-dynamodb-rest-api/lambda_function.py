@@ -97,7 +97,7 @@ def lambda_handler(event: Dict[str, Any], context) -> Dict[str, Any]:
         """
         Checking for customer_id parameter validation.
         If customer_id is valid - function returns None.
-        If customer_id is not valid - function returns an error message string
+        If customer_id is not valid - function returns a message string
         that describes the error.
         """
 
