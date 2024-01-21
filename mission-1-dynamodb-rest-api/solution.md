@@ -30,7 +30,7 @@
    We want to give the Lambda function only the relevant permissions.
    - Permissions → Change default execution role → Create a new role from AWS
    - Role name: `lambda-dynamodb-rest-api`
-   - In the Policy templates box type `Simple microservice permissions` and the suggested option.
+   - In the Policy templates box type `Simple microservice permissions` and press on the suggested option.
 
 4. Press `Create function`.
 
