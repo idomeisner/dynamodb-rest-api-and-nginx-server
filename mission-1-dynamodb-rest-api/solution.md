@@ -85,7 +85,7 @@ We’ll create an API Gateway resource with 2 methods:\
 2. Choose `REST API`.\
    **Note:** We can also use `HTTP API` for this mission.
 
-3. API name: `dynamodb-rest-api`.<br>
+3. API name: `dynamodb-rest-api`<br>
    ![API Creation](./images/api_creation.png)
 
 4. Create API resource.\
