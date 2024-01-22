@@ -25,25 +25,25 @@ def lambda_handler(event: Dict[str, Any], context) -> Dict[str, Any]:
         try:
             # Getting the customer ID from the query string
             query_param = event['queryStringParameters'] or {}
-            customer_id = query_param.get('customer_id')
+            customer_id = query_param.get('id')
 
             # Checking customer_id validation
             if msg := is_valid_id(customer_id):
                 raise QueryStringsError(msg)
 
             customer = {
-                'customer_id': customer_id
+                'id': customer_id
             }
 
             # Getting an item from the DynamoDB table
             response = table.get_item(
                 Key={
-                    'customer_id': customer_id
+                    'id': customer_id
                 }
             )
 
             body = {
-                'customer_id': customer_id,
+                'id': customer_id,
                 'customerInDB': "Item" in response
             }
 
@@ -67,12 +67,12 @@ def lambda_handler(event: Dict[str, Any], context) -> Dict[str, Any]:
             request_body = json.loads(event['body'])
 
             # Checking customer_id validation
-            customer_id = request_body.get('customer_id')
+            customer_id = request_body.get('id')
             if msg := is_valid_id(customer_id):
                 raise QueryStringsError(msg)
 
             customer = {
-                'customer_id': customer_id
+                'id': customer_id
             }
 
             # Adding the customer ID to the DynamoDB table
@@ -97,15 +97,15 @@ def lambda_handler(event: Dict[str, Any], context) -> Dict[str, Any]:
         """
         Checking for customer_id parameter validation.
         If customer_id is valid - function returns None.
-        If customer_id is not valid - function returns a message string
+        If customer_id is not valid - function returns an error message string
         that describes the error.
         """
 
         if not customer_id:
-            return "Parameter 'customer_id' is required"
+            return "Parameter 'id' is required"
 
         if not isinstance(customer_id, str):
-            return f"Parameter 'customer_id' requires a string"
+            return f"Parameter 'id' requires a string"
 
         if ' ' in customer_id:
             return f"Parameter {customer_id=} is invalid"
