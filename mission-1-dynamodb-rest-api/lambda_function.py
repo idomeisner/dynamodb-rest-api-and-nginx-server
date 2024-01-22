@@ -51,7 +51,7 @@ def lambda_handler(event: Dict[str, Any], context) -> Dict[str, Any]:
 
         except Exception as e:
             body = {
-                'message': f"{type(e).__name__}: {e}"
+                'message': f"{e}"
             }
             logger.error(f"{type(e).__name__}: {e}", exc_info=True)
 
@@ -87,7 +87,7 @@ def lambda_handler(event: Dict[str, Any], context) -> Dict[str, Any]:
 
         except Exception as e:
             body = {
-                'message': f"{type(e).__name__}: {e}"
+                'message': f"{e}"
             }
             logger.error(f"{type(e).__name__}: {e}", exc_info=True)
 
@@ -103,9 +103,6 @@ def lambda_handler(event: Dict[str, Any], context) -> Dict[str, Any]:
 
         if not customer_id:
             return "Parameter 'id' is required"
-
-        if not isinstance(customer_id, str):
-            return f"Parameter 'id' requires a string"
 
         if ' ' in customer_id:
             return f"Parameter {customer_id=} is invalid"
