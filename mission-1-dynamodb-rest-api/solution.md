@@ -100,5 +100,11 @@ We’ll create an API Gateway resource with 2 methods:\
    The method is integrated with the lambda function `dynamodb-rest-api`.<br>
    ![API PUT Method Creation](./images/api_put_method_creation.png)
 
-7. The API routes:<br>
+7. API routes:<br>
    ![API Routes](./images/api_routes.png)
+
+8. Deploy the API.<br>
+   On the right hand side, press `Deploy API`<br>
+   ![API Deployment](./images/api_deployment.png)
+
+9. 
