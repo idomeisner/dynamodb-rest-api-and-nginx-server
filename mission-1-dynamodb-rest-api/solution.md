@@ -77,7 +77,7 @@ Another option to give the Lambda function permissions is to manually create the
 ### API Gateway
 
 We’ll create an API Gateway resource with 2 methods:\
-`GET` - Checking whether a customer is in the DynamoDB table.
+`GET` - Checking whether a customer is in the DynamoDB table.\
 `PUT` - Update the DynamoDB table with a new customer.
 
 1. Create an API in the API Gateway console.
