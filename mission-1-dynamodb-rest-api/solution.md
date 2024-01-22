@@ -4,6 +4,7 @@
 * [DynamoDB](#dynamodb)
 * [Lambda Function](#lambda-function)
 * [API Gateway](#api-gateway)
+* [Testing the API](#testing-the-api)
 <br>
 
 ![Architecture](./images/architecture.png)
@@ -108,3 +109,26 @@ We’ll create an API Gateway resource with 2 methods:\
    ![API Deployment](./images/api_deployment.png)
 
 9. The API can be accessed through the `Invoke URL` we got in the API stage.
+<br>
+
+### Testing the API
+
+**GET request**
+
+1. `id` is in DynamoDB table:<br>
+   ![GET Request ID in DB](./images/get_request_example_1.png)
+
+2. `id` is not in DynamoDB table:<br>
+   ![GET Request ID not in DB](./images/get_request_example_2.png)
+
+3. Parameter `id` is missing:<br>
+   ![GET Request Parameter ID Missing](./images/get_request_example_3.png)
+<br>
+
+**PUT request**
+
+1. Adding `id` to DynamoDB table:<br>
+   ![PUT Request Adding ID to DB](./images/put_request_example_1.png)
+
+2. Parameter `id` is missing:<br>
+   ![PUT Request Parameter ID Missing](./images/put_request_example_2.png)
