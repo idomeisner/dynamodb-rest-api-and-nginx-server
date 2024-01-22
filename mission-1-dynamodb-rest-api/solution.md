@@ -104,7 +104,7 @@ We’ll create an API Gateway resource with 2 methods:\
    ![API Routes](./images/api_routes.png)
 
 8. Deploy the API.<br>
-   On the right hand side, press `Deploy API`<br>
+   On the right hand side, press `Deploy API`.<br>
    ![API Deployment](./images/api_deployment.png)
 
-9. 
+9. The API can be accessed through the `Invoke URL` we got in the API stage.
